@@ -1,0 +1,543 @@
+body{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0px;
+}
+
+.menu-pc{
+    background-color: rgba(0, 0, 0, 0.65);
+    height: 90px;
+    z-index: 99;
+    display: none;
+    position: fixed;
+    width: 100%;
+}
+
+.logo{
+    display: flex;
+    width: 100%;
+    max-width: 100px;
+    flex-wrap: wrap;
+    padding: 5px;   
+}
+
+
+.logoa {
+    position: relative;
+}
+
+.logoa img{
+    width: 100%;
+    max-width: 70px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+  
+.logoa .logoa2 {
+    position: absolute;  
+    top: 0;  
+    left: 0;
+    opacity: 0;
+}
+  
+.logoa:hover .logoa2 {
+    opacity: 1;
+}
+
+.top-redes{
+    width: 100%;
+    max-width: 100px;
+    display: flex; 
+   
+}
+
+.top-redes a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    margin: auto;
+    
+    
+}
+
+.top-redes a :hover {
+    color: #39B54A;
+}
+
+.menu-pc .menu{
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+.menu a{
+    color:  white;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    font-weight: 600;
+    
+}
+
+.menu a:hover{
+    color: #39B54A;
+}
+
+.menu-movil{
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    height: 90px;
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+}
+
+
+.burger-menu{
+    display: flex;
+    width: 100%;
+    max-width: 30px;
+    margin: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.burger-menu :hover{
+    color: #39B54A;
+}
+
+.slideMenu{
+    position: fixed;
+    top: 90px; 
+    right: -120px;       
+    background: rgba(0, 0, 0, 0.65);
+    text-align: center;    
+    width: 100px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    padding: 10px;
+}
+
+header .menu-movil .slideMenu.active {
+    right: 0px;
+}
+
+@media all and (min-width: 800px) {
+    header .menu-movil {
+      display: none;}
+
+    header .menu-pc {
+        display:flex;
+    }
+}
+
+/* Main*/
+
+.main .contenedor{
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.main .slider{
+    width: 300%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.slide{
+    width: 100%;
+    min-height: 450px;
+    background-size: cover;
+    background-position: center; 
+    overflow: hidden; 
+    transition: all 1s ease;    
+      
+}
+
+.slide.foto1{
+    background-image: url(../img/1Canela.jpg);
+}
+
+.slide.foto2{
+    background-image: url(../img/2Menta.jpg);
+}
+
+.slide.foto3{
+    background-image: url(../img/3Manzanilla.jpg);
+}
+
+.nosotros{
+    background-color: #5f5737;
+}
+
+.logob{  
+    text-align: center;
+    width: 100%;
+}
+
+.logob img{
+    width: 180px;
+    margin-top: -90px;
+}
+
+.texto{
+    color: white;
+    text-align: center;
+    padding: 50px;
+    padding-top: 0px;
+}
+
+h1{
+    font-size: 30px;   
+    font-style: italic;
+}
+
+@media all and (min-width: 800px) {
+
+    .texto {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
+/*---Inicia Productos---*/
+
+.productos{
+    background-color: #39B54A;
+    padding: 40px;
+    padding-top: 90px;
+    
+}
+
+.productos h2{
+    font-style: italic; 
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.te{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.tes .texto{
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    max-width: 400px;
+    border-bottom: white solid 1px ; 
+}
+
+.foto {
+    background-size: cover;
+    background-position: center;   
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    max-width: 250px;
+    margin: auto;
+    max-height: 100%;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.te.blanco .foto{
+    background-image: url('../img/teblanco.jpg');
+}
+
+.te.rojo .foto{
+    background-image: url('../img/terojo.jpg');
+}
+
+.te.verde .foto{
+    background-image: url('../img/teverde.jpg');
+}
+
+#te .overlay {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#te .overlay:hover {
+    opacity: 1;
+}
+
+#te .overlay i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+}
+
+.imagen-modal{
+    width: 50%;
+    max-width: 600px;
+    top:50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%, -50%);  
+}
+
+.imagen-modal + i {
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    color: white;
+    font-size: 50px;    
+    display: inline-block;
+    padding: 20px 20px;
+    cursor: pointer;
+  }
+
+@media all and (min-width: 800px) {
+
+    .tes .texto {
+        border-bottom: none;
+    }
+}
+
+
+/*---Inicia Sucursales---*/
+
+.sucursales{
+    padding-top: 90px;
+    width: 100%;
+    background-color: #5f5737;
+    align-content: center;
+    padding-bottom: 30px;
+}
+
+.sucursales h2{
+    font-style: italic; 
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+ 
+}
+
+.encabezado {
+    list-style: none;
+    display: flex;    
+    width: 100%;
+    margin: auto;
+    align-content: center;
+    max-width: 798px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.encabezado div{
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+  
+}
+.encabezado div a{
+    display: block;    
+    cursor: pointer;
+    transition: all .3 ease;
+    text-decoration: none;
+    color: white;
+    margin: auto; 
+    font-weight: 600; 
+    width: 100%; 
+    height: 100%;
+    text-align: center;   
+}
+
+.encabezado div:hover{
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.encabezado div.active { 
+    background-color: black;
+}
+
+.contenido {
+    max-width: 800px;
+    width: 100%;
+    background-color: black;
+    margin: auto;
+}
+
+.contenido > div{
+    display: none;
+    transition: all .3s ease;
+}
+
+.contenido .active{
+    display: block;
+    color: white;
+    background-color: black;
+}
+
+.contenido .item{
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    color: white;   
+    align-items: center;
+    padding-top: 20px;     
+}
+
+.contenido .item img{
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.contenido .item p{ 
+    width: 90%;    
+    margin: auto;  
+    text-align: center;    
+}
+
+/*Finaliza Sucurssales*/
+
+/*Inicia Contacto*/
+
+.datos.parallax{
+    padding: 100px;
+    position: relative;
+    background-image: url('../img/fondo.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.formulario {
+    position: relative;
+    z-index: 3;
+    background: white;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+}
+
+.formulario_contacto .input-group {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.formulario_contacto .input-group input[type="text"],
+.formulario_contacto .input-group input[type="email"],
+.formulario_contacto .input-group textarea {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    color: black;
+    width: 100%;
+    outline: none;
+    padding: 15px 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #b4975a ;
+    vertical-align: top;
+}
+
+.formulario_contacto .input-group input[type="text"]:focus,
+.formulario_contacto .input-group input[type="email"]:focus,
+.formulario_contacto .input-group textarea:focus {
+    outline: none;
+    border-bottom: 2px solid #b4975a;
+}
+
+.formulario_contacto .input-group textarea {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.formulario_contacto .input-group label {
+    color:  #b4975a;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.formulario_contacto .input-group label.label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-left: 1rem;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.formulario_contacto .input-group label.label.active {
+    top: -12px;
+    margin-left: 0;
+    font-size: 12px;
+    line-height: 12px;
+    color: #b4975a;
+}
+
+.formulario_contacto .input-group .error {
+    position: absolute;
+    color: #ff3b3b;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.875rem;
+}
+
+.formulario_contacto input[type="submit"] {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    background: #b4975a;
+    color: white;    
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    padding: 15px;
+    width: 70px;
+    outline: none;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.formulario_contacto input[type="submit"]:hover {
+    background: #977c44;
+}
+
+footer{
+    background-color: black;
+    color: #39B54A;
+    text-align: center;
+    padding: 40px;
+    ;
+}
+
+footer a{
+    text-decoration: none;
+    color: #39B54A;
+    margin: 20px;
+}
+
+footer a:hover{
+    color: white;
+}
